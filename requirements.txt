@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+statsmodels
+matplotlib       # for charts
+seaborn          # for prettier visualizations
+jupyter          # if you want to work in Jupyter Notebook
+streamlit        # for turning it into a web app
