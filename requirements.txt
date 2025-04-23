@@ -1,4 +1,9 @@
 pandas
+numpy
+scipy
+nltk
+tkinter
+argparse
 scikit-learn
 statsmodels
 matplotlib       # for charts
