@@ -1,24 +1,26 @@
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
+import logging
 from data_simulation import generate_fake_data
 from pattern_mining import count_ngrams
 from statistical_analysis import demographic_analysis
 from clustering import run_clustering, visualize_clusters
-import pandas as pd
-import logging
 from utils import save_cluster_results_to_csv, save_demographic_analysis_to_csv, save_patterns_to_csv
-
 
 # Visualization for Most Common Patterns
 def plot_most_common_patterns(pattern_counts):
     patterns, counts = zip(*pattern_counts.most_common(10))
     pattern_labels = [f"{p[0]} -> {p[1]}" for p in patterns]
+    
     plt.figure(figsize=(10, 6))
     sns.barplot(x=counts, y=pattern_labels, palette='viridis')
     plt.title('Most Common Navigation Patterns')
     plt.xlabel('Frequency')
     plt.ylabel('Pattern')
     plt.show()
+    plt.close()
 
 # Visualization for Pattern Correlation
 def plot_correlation_heatmap(df):
@@ -38,6 +40,7 @@ def plot_correlation_heatmap(df):
     sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
     plt.title('Pattern Correlation Heatmap')
     plt.show()
+    plt.close()
 
 # Visualization for Most Common Patterns Heatmap
 def plot_pattern_heatmap(ngram_counts):
@@ -51,6 +54,7 @@ def plot_pattern_heatmap(ngram_counts):
     plt.xlabel('Pattern')
     plt.ylabel('Frequency')
     plt.show()
+    plt.close()
 
 # Visualization for Cluster Features Heatmap
 def plot_cluster_heatmap(df_clustered):
@@ -62,7 +66,9 @@ def plot_cluster_heatmap(df_clustered):
     sns.clustermap(df_features.corr(), annot=True, cmap='coolwarm')
     plt.title('Cluster Feature Heatmap')
     plt.show()
-
+    matplotlib.use('Agg')
+    plt.close()
+    
     # Set up logging
     logging.basicConfig(filename='web_pattern_profiling.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

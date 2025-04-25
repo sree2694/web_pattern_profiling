@@ -6,6 +6,15 @@
 ## Overview
 This project leverages Artificial Intelligence (AI) to analyze user browsing behavior, extract patterns, and predict socio-demographic characteristics based on browsing sequences. The goal is to extract meaningful insights from user navigation patterns to understand preferences and predict various attributes like age group and gender.
 
+## 📦 Features
+
+- 🧪 Supervised Learning with Random Forest (age group classification)
+- 🔍 Unsupervised Pattern Mining (n-gram analysis, clustering)
+- 📊 Heatmaps, Learning Curves, and ROC Curves
+- 🧑‍💼 Demographic Analysis by Pattern
+- 💾 CSV Export for Patterns, Clusters, and Demographic Insights
+- 🖼 Tkinter GUI Interface
+
 ## Project Phases
 The project is divided into several phases, each targeting a specific aspect of the AI model development:
 

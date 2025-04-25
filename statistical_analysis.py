@@ -1,6 +1,6 @@
 import pandas as pd
-from pattern_mining import extract_ngrams
 import scipy.stats as stats
+from pattern_mining import extract_ngrams
 from statsmodels.stats.multitest import fdrcorrection
 
 

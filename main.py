@@ -1,7 +1,6 @@
-import argparse
 import tkinter as tk
-from tkinter import messagebox, scrolledtext
 import threading
+from tkinter import scrolledtext
 
 def run_unsupervised():
     output_text.insert(tk.END, "\n[INFO] Running unsupervised analysis...\n")

@@ -1,12 +1,11 @@
 pandas
+scikit-learn
+seaborn
+matplotlib
+sklearn
+random
 numpy
 scipy
-nltk
 tkinter
-argparse
-scikit-learn
-statsmodels
-matplotlib       # for charts
-seaborn          # for prettier visualizations
-jupyter          # if you want to work in Jupyter Notebook
-streamlit        # for turning it into a web app
+logging
+threading
